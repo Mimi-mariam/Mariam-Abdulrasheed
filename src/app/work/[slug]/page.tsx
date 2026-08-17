@@ -184,7 +184,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             {caseStudy.problem.painPoints.map((point, index) => (
               <div
                 key={index}
-                className="p-4 rounded-xl bg-white border border-zinc-200/80 shadow-2xs space-y-1.5"
+                className="p-4 rounded-xl bg-white border border-zinc-200/80 shadow-sm space-y-1.5"
               >
                 <span className="text-xs font-mono font-semibold text-orange-600">
                   Pain Point 0{index + 1}

@@ -33,7 +33,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/40 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-            <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-zinc-950/80 backdrop-blur-xs text-white text-[10px] font-mono tracking-wide uppercase">
+            <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-zinc-950/80 backdrop-blur-sm text-white text-[10px] font-mono tracking-wide uppercase">
               {project.category}
             </span>
           </div>
@@ -76,11 +76,11 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
                 <div className="p-2 rounded-lg bg-zinc-800/60 border border-zinc-700/40 space-y-1">
                   <div className="flex items-center justify-between text-[10px]">
                     <span className="text-zinc-300 font-medium truncate">Product Launch Teaser</span>
-                    <span className="px-1.5 py-0.2 rounded text-[9px] bg-pink-500/20 text-pink-300 font-mono">Instagram</span>
+                    <span className="px-1.5 py-0.5 rounded text-[9px] bg-pink-500/20 text-pink-300 font-mono">Instagram</span>
                   </div>
                   <div className="flex items-center justify-between text-[10px]">
                     <span className="text-zinc-300 font-medium truncate">Behind the Scenes Reel</span>
-                    <span className="px-1.5 py-0.2 rounded text-[9px] bg-cyan-500/20 text-cyan-300 font-mono">TikTok</span>
+                    <span className="px-1.5 py-0.5 rounded text-[9px] bg-cyan-500/20 text-cyan-300 font-mono">TikTok</span>
                   </div>
                 </div>
               </div>
@@ -96,7 +96,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         ) : (
           /* Abstract Architectural Wireframe Visualizer fallback */
           <div className="w-full h-full p-8 flex items-center justify-center bg-gradient-to-br from-zinc-100 to-zinc-200/60">
-            <div className="w-full h-full rounded-xl bg-white/90 border border-zinc-200/80 p-5 shadow-xs flex flex-col justify-between group-hover:scale-[1.02] transition-transform duration-300">
+            <div className="w-full h-full rounded-xl bg-white/90 border border-zinc-200/80 p-5 shadow-sm flex flex-col justify-between group-hover:scale-[1.02] transition-transform duration-300">
               <div className="flex items-center justify-between pb-3 border-b border-zinc-100">
                 <div className="flex items-center gap-1.5">
                   <span className="h-2.5 w-2.5 rounded-full bg-orange-500/80" />
@@ -113,16 +113,16 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
                 <div className="h-3 w-1/2 bg-orange-600/20 rounded-sm" />
                 <div className="grid grid-cols-3 gap-2 pt-2">
                   <div className="h-8 bg-zinc-50 border border-zinc-100 rounded p-1.5 flex flex-col justify-center">
-                    <div className="h-1.5 w-8 bg-zinc-300 rounded-xs mb-1" />
-                    <div className="h-2 w-12 bg-zinc-400 rounded-xs" />
+                    <div className="h-1.5 w-8 bg-zinc-300 rounded-sm mb-1" />
+                    <div className="h-2 w-12 bg-zinc-400 rounded-sm" />
                   </div>
                   <div className="h-8 bg-zinc-50 border border-zinc-100 rounded p-1.5 flex flex-col justify-center">
-                    <div className="h-1.5 w-8 bg-zinc-300 rounded-xs mb-1" />
-                    <div className="h-2 w-10 bg-orange-400 rounded-xs" />
+                    <div className="h-1.5 w-8 bg-zinc-300 rounded-sm mb-1" />
+                    <div className="h-2 w-10 bg-orange-400 rounded-sm" />
                   </div>
                   <div className="h-8 bg-zinc-50 border border-zinc-100 rounded p-1.5 flex flex-col justify-center">
-                    <div className="h-1.5 w-8 bg-zinc-300 rounded-xs mb-1" />
-                    <div className="h-2 w-11 bg-zinc-400 rounded-xs" />
+                    <div className="h-1.5 w-8 bg-zinc-300 rounded-sm mb-1" />
+                    <div className="h-2 w-11 bg-zinc-400 rounded-sm" />
                   </div>
                 </div>
               </div>

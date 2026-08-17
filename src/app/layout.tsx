@@ -62,7 +62,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${newsreader.variable} scroll-smooth`}>
       <body className="min-h-screen flex flex-col font-sans bg-[#fafaf9] text-[#18181b] antialiased selection:bg-orange-100 selection:text-orange-900">
         <Navigation />
-        <main className="flex-1 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pt-28 pb-20">
+        <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 pt-24 sm:pt-28 pb-20 overflow-x-hidden">
           {children}
         </main>
         <Footer />

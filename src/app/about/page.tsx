@@ -23,7 +23,7 @@ export default function AboutPage() {
 
       {/* Main Narrative */}
       <article className="space-y-8 text-base text-zinc-700 font-sans leading-relaxed">
-        <div className="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs space-y-4">
+        <div className="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-sm space-y-4">
           <h3 className="text-xl font-serif text-zinc-950 font-normal">
             Why Product Engineering?
           </h3>
