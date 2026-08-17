@@ -461,6 +461,8 @@ export const SITE_CONFIG = {
   meta: {
     title: "Mariam Abdul-Rasheed | Product Engineer",
     description: "Personal portfolio of Mariam Abdul-Rasheed, a Product Engineer who designs, builds, integrates AI, and ships production digital products.",
-    url: "https://mariam-abdulrasheed.vercel.app"
+    url: process.env.NEXT_PUBLIC_SITE_URL 
+      ? (process.env.NEXT_PUBLIC_SITE_URL.startsWith("http") ? process.env.NEXT_PUBLIC_SITE_URL : `https://${process.env.NEXT_PUBLIC_SITE_URL}`)
+      : "https://mariam-abdulrasheed.vercel.app"
   }
 };
