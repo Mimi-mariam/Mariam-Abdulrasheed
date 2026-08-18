@@ -31,10 +31,10 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${project.title} — Case Study`,
+    title: `${project.title} , Case Study`,
     description: project.summary,
     openGraph: {
-      title: `${project.title} — Product Case Study`,
+      title: `${project.title} , Product Case Study`,
       description: project.summary,
     },
   };

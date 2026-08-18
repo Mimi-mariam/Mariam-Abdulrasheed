@@ -23,7 +23,7 @@ export default function ContactPage() {
         <SectionHeader
           eyebrow="Contact &amp; Connect"
           title="Let's build something exceptional."
-          description="Whether you have an upcoming project, a full-time role, or want to discuss product engineering, AI workflows, or design systems—I'd love to hear from you."
+          description="Whether you have an upcoming project, a full-time role, or want to discuss product engineering, AI workflows, or design systems,I'd love to hear from you."
         />
       </div>
 

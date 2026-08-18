@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "About Mariam Abdul-Rasheed",
-  description: "Product Engineer based in Nigeria — bridging product strategy, accessible design systems, Next.js engineering, and AI integration.",
+  description: "Product Engineer based in Nigeria , bridging product strategy, accessible design systems, Next.js engineering, and AI integration.",
 };
 
 export default function AboutPage() {
@@ -31,7 +31,7 @@ export default function AboutPage() {
             Traditional handoffs between product managers, UI designers, and software engineers often result in lost nuance, delayed timelines, and misaligned user experiences.
           </p>
           <p>
-            As a <strong className="text-zinc-950 font-medium">Product Engineer</strong>, I work end-to-end. I don&apos;t just take a spec and start writing code—I validate the user problem, prototype and stress-test the UI in Figma, engineer the application using <strong className="text-zinc-950 font-medium">Next.js and TypeScript</strong>, and integrate AI to automate repetitive workflows.
+            As a <strong className="text-zinc-950 font-medium">Product Engineer</strong>, I work end-to-end. I don&apos;t just take a spec and start writing code,I validate the user problem, prototype and stress-test the UI in Figma, engineer the application using <strong className="text-zinc-950 font-medium">Next.js and TypeScript</strong>, and integrate AI to automate repetitive workflows.
           </p>
         </div>
 

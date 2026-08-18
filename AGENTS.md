@@ -242,11 +242,11 @@ Prioritize simple, reusable, maintainable implementation.
 
 Use npm. Verify all work with these before finishing:
 
-* `npm install` — install dependencies
-* `npm run dev` — local development server
-* `npm run lint` — lint check (must pass)
-* `npm run build` — production build (must succeed)
-* `npm run start` — serve the production build locally
+* `npm install` , install dependencies
+* `npm run dev` , local development server
+* `npm run lint` , lint check (must pass)
+* `npm run build` , production build (must succeed)
+* `npm run start` , serve the production build locally
 
 No unit-test framework is used by default. Verify with `npm run lint`, `npm run build`, and manual checks of every route and interaction. Add tests only if the user requests them.
 
@@ -254,10 +254,10 @@ No unit-test framework is used by default. Verify with `npm run lint`, `npm run 
 
 ## Folder Structure
 
-* `src/app/` — App Router routes and pages
-* `src/components/` — reusable UI components
-* `src/data/` — site and project content
-* `public/images/` — optimized project images
+* `src/app/` , App Router routes and pages
+* `src/components/` , reusable UI components
+* `src/data/` , site and project content
+* `public/images/` , optimized project images
 
 ---
 

@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_CONFIG.name} — ${SITE_CONFIG.role}`,
+    default: `${SITE_CONFIG.name} , ${SITE_CONFIG.role}`,
     template: `%s | ${SITE_CONFIG.name}`,
   },
   description: SITE_CONFIG.bio,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   creator: SITE_CONFIG.name,
   metadataBase: new URL(SITE_CONFIG.meta.url),
   openGraph: {
-    title: `${SITE_CONFIG.name} — ${SITE_CONFIG.role}`,
+    title: `${SITE_CONFIG.name} , ${SITE_CONFIG.role}`,
     description: SITE_CONFIG.bio,
     url: SITE_CONFIG.meta.url,
     siteName: `${SITE_CONFIG.name} Portfolio`,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_CONFIG.name} — ${SITE_CONFIG.role}`,
+    title: `${SITE_CONFIG.name} , ${SITE_CONFIG.role}`,
     description: SITE_CONFIG.bio,
     creator: "@mariam_dev",
   },

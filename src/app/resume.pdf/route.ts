@@ -165,7 +165,7 @@ export async function GET() {
     c.sectionTitle("Certifications");
     for (const cert of RESUME_DATA.certifications) {
       c.text(cert.title, { size: BODY_SIZE, bold: true });
-      c.text(`${cert.issuer} — ${cert.year}`, { size: META_SIZE, color: MUTED });
+      c.text(`${cert.issuer} , ${cert.year}`, { size: META_SIZE, color: MUTED });
     }
     c.spacer(2);
   }

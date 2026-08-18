@@ -68,7 +68,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "project-1",
     slug: "planora-ai-content-planner",
-    title: "Planora — AI-Powered Content Planning SaaS",
+    title: "Planora , AI-Powered Content Planning SaaS",
     tagline: "Move from scattered ideas to scheduled cross-platform posts with AI ideation and visual planning.",
     summary: "A production SaaS product empowering creators to organize multi-platform content calendars, generate AI captions and hashtags, and track publishing pipelines.",
     description: "Conceived, designed, and built as a full-cycle web application featuring interactive drag-and-drop planning, AI assistant toolsets, and multi-platform publishing workflows.",
@@ -157,7 +157,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "project-3",
     slug: "medvive-telehealth-platform",
-    title: "Medvive — Telehealth Web App & Consultation Flow",
+    title: "Medvive , Telehealth Web App & Consultation Flow",
     tagline: "Accessible digital health platform simplifying doctor-patient consultation and clinical booking.",
     summary: "A telehealth web application case study streamlining appointment booking, real-time consultation handoffs, and patient health record accessibility.",
     description: "Collaborated on clinical user research, redesigned multi-step consultation scheduling workflows, and developed accessible UI component systems in Figma.",
@@ -322,7 +322,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "project-5",
     slug: "sellsnap-ai-commerce",
-    title: "SellSnap — AI-Powered Mobile Commerce & Inventory Platform",
+    title: "SellSnap , AI-Powered Mobile Commerce & Inventory Platform",
     tagline: "Instant photo-to-listing commerce app enabling social sellers to automate catalog creation, payments, and order tracking.",
     summary: "An AI-powered mobile commerce platform designed to help independent sellers turn product photos into complete storefront listings with AI description generation and instant checkout links.",
     description: "Conceived product workflows, designed end-to-end mobile app interfaces in Figma, and mapped AI image recognition and automated copy generation pipelines for fast merchant onboarding.",

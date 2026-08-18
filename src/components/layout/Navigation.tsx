@@ -10,15 +10,21 @@ import { SITE_CONFIG } from "@/data/projects";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
+  { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/resume", label: "Resume" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export function Navigation() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [prevPathname, setPrevPathname] = useState(pathname);
+
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setIsOpen(false);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,11 +33,6 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Close drawer on path change
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {

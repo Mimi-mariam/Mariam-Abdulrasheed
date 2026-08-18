@@ -5,8 +5,8 @@ import { RESUME_DATA } from "@/data/resume";
 import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Resume — Mariam Abdul-Rasheed",
-  description: "Comprehensive resume of Mariam Abdul-Rasheed — Product Engineer with expertise in Product Discovery, Design Systems, Next.js/TypeScript, and AI Workflows.",
+  title: "Resume , Mariam Abdul-Rasheed",
+  description: "Comprehensive resume of Mariam Abdul-Rasheed , Product Engineer with expertise in Product Discovery, Design Systems, Next.js/TypeScript, and AI Workflows.",
 };
 
 export default function ResumePage() {
@@ -159,6 +159,43 @@ export default function ResumePage() {
             ))}
           </div>
         </section>
+
+        {/* Projects */}
+        {RESUME_DATA.projects && RESUME_DATA.projects.length > 0 && (
+          <section className="space-y-6 pt-6 border-t border-zinc-100">
+            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400">
+              Projects
+            </h2>
+
+            <div className="space-y-8">
+              {RESUME_DATA.projects.map((project, idx) => (
+                <div key={idx} className="space-y-3">
+                  <div className="flex items-baseline justify-between gap-1">
+                    <div>
+                      <h3 className="text-base font-semibold text-zinc-950">
+                        {project.name}
+                      </h3>
+                      {project.description && (
+                        <p className="text-xs font-mono text-zinc-600">
+                          {project.description}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <ul className="space-y-2 pt-1 text-xs sm:text-sm text-zinc-700">
+                    {project.achievements.map((achieve, aIdx) => (
+                      <li key={aIdx} className="flex items-start gap-2.5">
+                        <span className="h-1.5 w-1.5 rounded-full bg-zinc-400 mt-2 shrink-0" />
+                        <span className="leading-relaxed">{achieve}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Certifications */}
         {RESUME_DATA.certifications && RESUME_DATA.certifications.length > 0 && (

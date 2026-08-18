@@ -21,6 +21,12 @@ export interface ResumeCertification {
   year: string;
 }
 
+export interface ResumeProject {
+  name: string;
+  description: string;
+  achievements: string[];
+}
+
 export interface ResumeData {
   name: string;
   title: string;
@@ -39,13 +45,14 @@ export interface ResumeData {
     items: string[];
   }[];
   experience: ResumeExperience[];
+  projects: ResumeProject[];
   certifications: ResumeCertification[];
   education: ResumeEducation[];
 }
 
 export const RESUME_DATA: ResumeData = {
   name: "Mariam Abdul-Rasheed",
-  title: "Product Engineer | UI/UX Design Engineer | AI Automation Builder",
+  title: "UI/UX Design Engineer | Product Engineer | AI Automation Builder",
   location: "Nigeria",
   summary: "UI/UX Design Engineer and Product Engineer with experience designing, building, and launching user-centered digital products. Skilled in UX design, product strategy, AI-assisted development, and workflow automation. Experienced in transforming ideas into functional products through research, prototyping, design systems, and rapid MVP development. Passionate about solving real-world problems through design, technology, and AI-powered solutions.",
   contact: {
@@ -69,6 +76,8 @@ export const RESUME_DATA: ResumeData = {
         "Prototyping",
         "User Research",
         "Competitor Analysis",
+        "Design Systems",
+        "Product Development",
         "Rapid MVP Development"
       ]
     },
@@ -113,7 +122,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       role: "Product Designer & AI Workflow Architect",
-      company: "Trams (Harplify — AI-Powered Music Marketing)",
+      company: "Trams (Harplify, AI-Powered Music Marketing)",
       location: "Remote",
       period: "June 2025 — January 2026",
       type: "AI Music Marketing SaaS",
@@ -135,6 +144,25 @@ export const RESUME_DATA: ResumeData = {
       ]
     }
   ],
+  projects: [
+    {
+      name: "SellSnap",
+      description: "Link-Based Commerce Platform",
+      achievements: [
+        "Designed a commerce solution that enables users to sell products using shareable payment links.",
+        "Created seller dashboard, product creation flow, checkout experience, and order management system.",
+        "Focused on reducing payment friction for WhatsApp and Instagram sellers."
+      ]
+    },
+    {
+      name: "Planora",
+      description: "AI Content Workflow Platform",
+      achievements: [
+        "Designed a structured content workflow system from idea generation to publishing.",
+        "Developed pipeline management, content tracking, and AI-assisted content planning experiences."
+      ]
+    }
+  ],
   certifications: [
     {
       title: "Google UX Design Certificate",
@@ -149,18 +177,18 @@ export const RESUME_DATA: ResumeData = {
   ],
   education: [
     {
-      degree: "Bachelor of Science (B.Sc.) in Accounting",
-      institution: "Miva Open University",
-      location: "Yaba, Lagos",
-      period: "2025 — 2028",
-      details: "Pursuing degree with focus on financial systems, analytical modeling, and digital commerce."
-    },
-    {
       degree: "Diploma in Accounting",
       institution: "Federal Polytechnic Ede",
       location: "Ede, Osun State",
       period: "2015 — 2018",
       details: "Completed National Diploma program with foundational training in accounting and administration."
+    },
+    {
+      degree: "Bachelor of Science (B.Sc.) in Accounting",
+      institution: "Miva Open University",
+      location: "Yaba, Lagos",
+      period: "2025 — 2028",
+      details: "Pursuing degree with focus on financial systems, analytical modeling, and digital commerce."
     }
   ]
 };

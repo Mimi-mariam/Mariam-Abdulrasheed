@@ -45,3 +45,13 @@
 .font-sans {
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
+
+/* Respect prefers-reduced-motion for decorative Tailwind animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse,
+  .animate-ping,
+  .animate-bounce,
+  .animate-spin {
+    animation: none;
+  }
+}
