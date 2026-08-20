@@ -10,7 +10,6 @@ import { SITE_CONFIG } from "@/data/projects";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
-  { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/resume", label: "Resume" },
 ];
