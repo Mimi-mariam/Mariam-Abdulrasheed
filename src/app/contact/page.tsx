@@ -108,7 +108,7 @@ export default function ContactPage() {
         <div className="pt-6 border-t border-zinc-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-zinc-500">
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            <span>Currently available for full-time Product Engineer roles</span>
+            <span>Currently available for full-time Product Engineering roles</span>
           </div>
           <span className="font-mono">Location: Nigeria (Open to Remote)</span>
         </div>

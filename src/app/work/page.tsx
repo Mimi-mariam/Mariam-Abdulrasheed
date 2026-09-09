@@ -18,8 +18,8 @@ export default function WorkPage() {
       <div>
         <SectionHeader
           eyebrow="Portfolio &amp; Case Studies"
-          title="Engineered Products, Built to Ship."
-          description="A curated index of full-stack web applications, design systems, and AI-enabled product tools. Every project demonstrates clear product thinking from problem definition to live deployment."
+          title="Products I've designed, built, and shipped."
+          description="I like working across the entire product process — understanding the problem, shaping the experience, building the product, and figuring out how technology can make it better. Here are a few projects that show how I work."
         />
 
         {/* Methodology Pill bar */}

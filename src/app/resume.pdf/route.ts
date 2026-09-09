@@ -120,6 +120,9 @@ export async function GET() {
   // Header
   c.text(RESUME_DATA.name.toUpperCase(), { size: HEADER_SIZE, bold: true });
   c.text(RESUME_DATA.title, { size: 11, color: ORANGE });
+  if (RESUME_DATA.pillars) {
+    c.text(RESUME_DATA.pillars, { size: 9, bold: true, color: INK });
+  }
   const contactLine = [
     RESUME_DATA.location,
     RESUME_DATA.contact.email,
@@ -134,8 +137,11 @@ export async function GET() {
 
   // Summary
   c.sectionTitle("Professional Summary");
-  c.paragraph(RESUME_DATA.summary);
-  c.spacer(6);
+  for (const para of RESUME_DATA.summary.split("\n\n")) {
+    c.paragraph(para);
+    c.spacer(2);
+  }
+  c.spacer(4);
 
   // Skills
   c.sectionTitle("Core Competencies");

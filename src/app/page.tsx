@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ArrowUpRight, Sparkles, Layers } from "lucide-react";
 import { PROJECTS_DATA, SITE_CONFIG } from "@/data/projects";
 import { ProjectCard } from "@/components/project/ProjectCard";
@@ -16,10 +17,19 @@ export default function HomePage() {
       {/* 1. HERO SECTION */}
       <section className="relative pt-6 sm:pt-12 max-w-4xl">
         {/* Availability Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/60 mb-8">
+        <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-zinc-200/80 shadow-xs mb-8">
+          <div className="relative h-6 w-6 rounded-full overflow-hidden shrink-0 border border-orange-200 bg-zinc-100">
+            <Image
+              src="/images/mariam-profile.jpg"
+              alt="Mariam Abdul-Rasheed"
+              fill
+              sizes="24px"
+              className="object-cover object-top"
+            />
+          </div>
           <span className="h-2 w-2 rounded-full bg-orange-600 animate-pulse" />
-          <span className="text-xs font-mono font-medium text-orange-900 tracking-tight">
-            Product Engineer &middot; Open to Full-time &amp; High-Impact Roles
+          <span className="text-xs font-mono font-medium text-zinc-800 tracking-tight">
+            Product Engineer &middot; Open to Full-time Roles
           </span>
         </div>
 
@@ -27,13 +37,13 @@ export default function HomePage() {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-zinc-950 font-normal tracking-tight leading-[1.15] mb-6">
           I turn ideas into{" "}
           <span className="italic font-serif text-orange-600">
-            products.
+            digital products people can actually use.
           </span>
         </h1>
 
         {/* Value Proposition */}
         <p className="text-lg sm:text-xl text-zinc-600 font-sans leading-relaxed max-w-2xl mb-10">
-          I&apos;m <span className="font-semibold text-zinc-900">{SITE_CONFIG.name}</span>, a Product Engineer who combines product thinking, design, engineering, and AI to take products from idea to production.
+          I&apos;m <span className="font-semibold text-zinc-900">{SITE_CONFIG.name}</span>. I combine product strategy, UX design, engineering, and AI to take ideas from concept to launch.
         </p>
 
         {/* CTAs */}
@@ -73,7 +83,7 @@ export default function HomePage() {
           <SectionHeader
             eyebrow="Selected Work"
             title="Engineered Products &amp; Systems"
-            description="Real software projects built from the ground up, highlighting product architecture, technical execution, and verifiable results."
+            description="Products I've designed and built from idea to launch."
             className="mb-0"
           />
           <Link
@@ -118,16 +128,22 @@ export default function HomePage() {
           <div className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-orange-500" />
             <span className="text-xs font-mono uppercase tracking-wider text-orange-400">
-              Product Philosophy
+              My approach
             </span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-serif font-normal text-white leading-snug">
-            Engineering isn&apos;t just writing syntax&mdash;it&apos;s building the right solution to a high-value problem.
+            Build the right thing, then build it well.
           </h2>
 
           <p className="text-sm sm:text-base text-zinc-300 font-sans leading-relaxed">
-            As a Product Engineer, I refuse to work in isolated silos. I collaborate across the entire spectrum: synthesizing user pain points, testing interaction prototypes in Figma, architecting resilient Next.js backends, and automating workflows using AI.
+            I don&apos;t believe product engineering starts with writing code. It starts with understanding the problem.
+          </p>
+          <p className="text-sm sm:text-base text-zinc-300 font-sans leading-relaxed">
+            I work across the product lifecycle — from defining the problem and designing the experience to building, integrating AI, and shipping the final product.
+          </p>
+          <p className="text-sm sm:text-base text-zinc-300 font-sans leading-relaxed">
+            The goal isn&apos;t to add more technology. It&apos;s to build something useful.
           </p>
 
           <div className="pt-4 flex flex-wrap items-center gap-4">
@@ -137,13 +153,13 @@ export default function HomePage() {
               className="bg-zinc-800/80 text-white border-zinc-700 hover:bg-zinc-700 hover:text-white"
               icon={<ArrowRight className="h-4 w-4" />}
             >
-              Read More About My Approach
+              More about me
             </Button>
             <Link
               href="/resume"
               className="text-xs font-mono text-zinc-400 hover:text-white underline-offset-4 hover:underline transition-colors"
             >
-              View Full Resume →
+              View my resume →
             </Link>
           </div>
         </div>
@@ -154,27 +170,21 @@ export default function HomePage() {
       <section className="text-center max-w-2xl mx-auto space-y-6 py-8">
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100 text-zinc-700 text-xs font-mono font-medium">
           <Sparkles className="h-3 w-3 text-orange-600" />
-          <span>Let&apos;s Build Something Meaningful</span>
+          <span>Let&apos;s build something.</span>
         </span>
 
         <h2 className="text-3xl sm:text-4xl font-serif text-zinc-950 font-normal">
-          Have a product in mind, or looking for a Product Engineer?
+          Have an idea, product challenge, or team that needs a Product Engineer?
         </h2>
 
         <p className="text-sm sm:text-base text-zinc-600 leading-relaxed">
-          I am always excited to discuss new opportunities, technical scoping, and high-impact digital products.
+          I&apos;m open to full-time opportunities and interesting product projects.
         </p>
 
         <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
           <Button href="/contact" size="lg" icon={<ArrowRight className="h-4 w-4" />}>
-            Start a Conversation
+            Get in touch
           </Button>
-          <a
-            href={`mailto:${SITE_CONFIG.email}`}
-            className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-mono text-zinc-700 hover:text-zinc-950 hover:bg-zinc-100 rounded-lg transition-colors border border-zinc-200"
-          >
-            {SITE_CONFIG.email}
-          </a>
         </div>
       </section>
     </div>

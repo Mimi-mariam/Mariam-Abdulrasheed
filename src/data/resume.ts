@@ -30,6 +30,7 @@ export interface ResumeProject {
 export interface ResumeData {
   name: string;
   title: string;
+  pillars?: string;
   location: string;
   summary: string;
   contact: {
@@ -52,9 +53,10 @@ export interface ResumeData {
 
 export const RESUME_DATA: ResumeData = {
   name: "Mariam Abdul-Rasheed",
-  title: "UI/UX Design Engineer | Product Engineer | AI Automation Builder",
+  title: "Product Engineer",
+  pillars: "Product · Design · Engineering · AI",
   location: "Nigeria",
-  summary: "UI/UX Design Engineer and Product Engineer with experience designing, building, and launching user-centered digital products. Skilled in UX design, product strategy, AI-assisted development, and workflow automation. Experienced in transforming ideas into functional products through research, prototyping, design systems, and rapid MVP development. Passionate about solving real-world problems through design, technology, and AI-powered solutions.",
+  summary: "Product Engineer focused on turning ideas into useful, working digital products. I work across product thinking, UX, full-stack development, and AI to take products from problem definition and prototyping through implementation and deployment.\n\nExperienced in building web products with React, Next.js, TypeScript, PostgreSQL, and AI-powered workflows, with a strong focus on usability, clear product decisions, and rapid MVP development.",
   contact: {
     email: "Marizmimi111@gmail.com",
     phone: "+2349045464299",

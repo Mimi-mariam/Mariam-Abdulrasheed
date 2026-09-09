@@ -40,12 +40,21 @@ export const metadata: Metadata = {
     siteName: `${SITE_CONFIG.name} Portfolio`,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/images/mariam-profile.jpg",
+        width: 800,
+        height: 1000,
+        alt: `${SITE_CONFIG.name} , ${SITE_CONFIG.role}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_CONFIG.name} , ${SITE_CONFIG.role}`,
     description: SITE_CONFIG.bio,
     creator: "@mariam_dev",
+    images: ["/images/mariam-profile.jpg"],
   },
   robots: {
     index: true,

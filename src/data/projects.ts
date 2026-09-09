@@ -68,13 +68,13 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "project-1",
     slug: "planora-ai-content-planner",
-    title: "Planora , AI-Powered Content Planning SaaS",
-    tagline: "Move from scattered ideas to scheduled cross-platform posts with AI ideation and visual planning.",
-    summary: "A production SaaS product empowering creators to organize multi-platform content calendars, generate AI captions and hashtags, and track publishing pipelines.",
+    title: "Planora",
+    tagline: "AI-powered content planning",
+    summary: "Creators often have ideas but struggle to turn them into organized, consistent content. I designed and built Planora to bring content ideas, planning, AI assistance, scheduling, and publishing into one workflow.",
     description: "Conceived, designed, and built as a full-cycle web application featuring interactive drag-and-drop planning, AI assistant toolsets, and multi-platform publishing workflows.",
-    role: "Product Engineer (Founder & Developer)",
+    role: "Product · UX · Engineering · AI",
     category: "Full Stack & AI",
-    technologies: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "OpenAI API", "Lucide Icons", "Vercel"],
+    technologies: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "DeepSeek API", "Lucide Icons", "Vercel"],
     image: "/images/projects/planora.webp",
     featured: true,
     liveUrl: "https://planora-two-umber.vercel.app",
@@ -82,7 +82,7 @@ export const PROJECTS_DATA: Project[] = [
       overview: {
         role: "Product Engineer (End-to-End)",
         timeline: "6 Weeks",
-        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "OpenAI Structured Outputs", "Vercel"],
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "DeepSeek API", "Vercel"],
         summary: "Engineered an AI-first content planner replacing messy spreadsheets with intuitive calendar scheduling and smart idea generation."
       },
       problem: {
@@ -141,8 +141,8 @@ export const PROJECTS_DATA: Project[] = [
         ]
       },
       aiAndAutomation: {
-        implementation: "Integrated OpenAI API pipelines with tailored prompts to synthesize raw post thoughts into polished, platform-tailored copy and tags.",
-        impact: "Accelerated the ideation-to-scheduled post cycle from 40 minutes to under 5 minutes per piece."
+        implementation: "Integrated DeepSeek API pipelines with tailored prompts to synthesize raw post thoughts into polished, platform-tailored copy and tags.",
+        impact: "Designed to reduce the time from ideation to scheduling by bringing AI generation and planning into one workflow."
       },
       outcome: {
         summary: "Shipped full SaaS product live to production on Vercel.",
@@ -150,171 +150,6 @@ export const PROJECTS_DATA: Project[] = [
           "Live at planora-two-umber.vercel.app",
           "Trusted by creators to manage consistent publishing schedules",
           "100% responsive across desktop, tablet, and mobile browsers"
-        ]
-      }
-    }
-  },
-  {
-    id: "project-3",
-    slug: "medvive-telehealth-platform",
-    title: "Medvive , Telehealth Web App & Consultation Flow",
-    tagline: "Accessible digital health platform simplifying doctor-patient consultation and clinical booking.",
-    summary: "A telehealth web application case study streamlining appointment booking, real-time consultation handoffs, and patient health record accessibility.",
-    description: "Collaborated on clinical user research, redesigned multi-step consultation scheduling workflows, and developed accessible UI component systems in Figma.",
-    role: "Product & UI/UX Design (Contributor)",
-    category: "Web Product",
-    technologies: ["Figma", "Design Systems", "UI/UX Research", "Interactive Prototyping", "WCAG 2.1 AA"],
-    image: "https://mir-s3-cdn-cf.behance.net/project_modules/hd/ca042b241563965.695b850c47ee4.jpg",
-    featured: false,
-    liveUrl: "https://medvive.ng",
-    behanceUrl: "https://www.behance.net/gallery/241563965/Medvive-Telehealth-Web-App-UIUX-Case-Study",
-    caseStudy: {
-      overview: {
-        role: "UI/UX & Product Design",
-        timeline: "4 Weeks",
-        team: "Collaborated with Senior Product Designer & Clinical Stakeholders",
-        technologies: ["Figma", "Design Systems", "Usability Testing", "Accessibility Auditing"],
-        summary: "Redesigned patient-to-doctor consultation journeys to reduce appointment abandonment and enhance digital health accessibility across diverse user age groups."
-      },
-      problem: {
-        statement: "Patients seeking remote healthcare faced confusing onboarding steps, unclear doctor availability schedules, and overwhelming medical intake forms that led to consultation abandonment.",
-        painPoints: [
-          "Complex clinical questionnaires caused high drop-off before patients could confirm appointments.",
-          "Unclear doctor specialties and response times led to patient anxiety and support ticket overload.",
-          "Low-contrast interface elements failed accessibility benchmarks for elderly and low-vision patients."
-        ]
-      },
-      usersAndContext: {
-        targetAudience: "Patients needing timely general practice and specialist consultations, plus healthcare providers managing busy digital appointment queues.",
-        context: "Healthcare interactions require extreme clarity, reassuring privacy markers, and minimal cognitive strain during stressful moments."
-      },
-      approach: {
-        strategy: "Re-architected the consultation journey into transparent, low-friction stages: Symptom Intake → Specialist Matching → Time Slot Confirmation → Virtual Waiting Room.",
-        keyPillars: [
-          { title: "Progressive Intake", description: "Broke down complex clinical intake into digestible, multi-step micro-forms." },
-          { title: "Specialist Transparency", description: "Created high-trust doctor profile cards with verified credentials, ratings, and immediate slot availability." },
-          { title: "Inclusive Accessibility", description: "Enforced strict WCAG 2.1 AA color contrast, typography hierarchies, and touch-target standards." }
-        ]
-      },
-      researchAndInsights: {
-        summary: "Conducted usability tests and stakeholder interviews to pinpoint the major friction points in virtual consultation workflows.",
-        findings: [
-          "65% of drop-offs occurred on the medical history form due to excessive single-page scroll length.",
-          "Clear real-time consultation price breakdowns improved booking completion rates by over 40%."
-        ]
-      },
-      productDecisions: [
-        {
-          title: "Step-by-Step Accordion Booking over Single-Page Form",
-          rationale: "Reduces visual cognitive load and guides anxious patients methodically toward booking completion.",
-          tradeoff: "Required careful state preservation so patients can modify previous answers easily."
-        },
-        {
-          title: "Clear Appointment Status Badges and Direct Reminders",
-          rationale: "Provides reassurance and reduces missed virtual appointments.",
-          tradeoff: "Requires clear visual hierarchy to avoid crowding the patient home dashboard."
-        }
-      ],
-      design: {
-        description: "Calm, trust-inducing healthcare interface utilizing serene medical blues and soft neutrals, paired with clear typography and readable data cards.",
-        highlights: [
-          "Clear calendar time-slot selector with instant zone synchronization",
-          "Visual doctor badge profiles with specialty tags",
-          "Responsive consultation management dashboard for patients"
-        ]
-      },
-      build: {
-        architecture: "Comprehensive Figma design system with auto-layout variants, spacing tokens, and detailed developer handoff specifications.",
-        technicalHighlights: [
-          "Complete design tokens for spacing, elevation, colors, and typography",
-          "Interactive prototype with full micro-interactions for doctor booking states",
-          "High-contrast focus rings and accessible touch targets verified against WCAG AA standards"
-        ]
-      },
-      outcome: {
-        summary: "Published full case study on Behance documenting the end-to-end design research, design decisions, and prototype solutions.",
-        achievements: [
-          "Published and featured on Behance (Medvive Telehealth Case Study)",
-          "Streamlined patient consultation booking journey from 7 steps to 3 intuitive milestones",
-          "100% WCAG 2.1 AA accessible UI color contrast rating across all states"
-        ]
-      }
-    }
-  },
-  {
-    id: "project-4",
-    slug: "marizhaircastle-ecommerce",
-    title: "Marizhaircastle Luxury E-Commerce",
-    tagline: "High-performance luxury hair e-commerce storefront with custom wig curation and 24-hour fulfillment.",
-    summary: "An editorial e-commerce platform engineered for premium hair extensions, custom frontal units, and bespoke color curation with rapid checkout and seamless catalog browsing.",
-    description: "Designed and built as a full-featured e-commerce product combining bespoke product filtering, interactive style showcases, custom wig builder flows, and Flutterwave payment integration.",
-    role: "Product Engineer & Lead Developer",
-    category: "Web Product",
-    technologies: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "Flutterwave Payments", "Responsive Media"],
-    image: "https://marizhaircastle.vercel.app/images/hero-wavy-hair.jpg",
-    featured: true,
-    liveUrl: "https://marizhaircastle.vercel.app",
-    caseStudy: {
-      overview: {
-        role: "Product Engineer (Design & Full-Stack)",
-        timeline: "5 Weeks",
-        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Flutterwave API", "Vercel"],
-        summary: "Created a bespoke luxury e-commerce experience tailored for Nigerian high-end hair clients with instant stock verification and mobile-optimized checkout."
-      },
-      problem: {
-        statement: "High-end hair shopping in Nigeria often suffers from fragmented Instagram DM sales, lack of transparent stock verification, and friction in selecting custom wig lace types and lengths.",
-        painPoints: [
-          "Customers lose trust with manual WhatsApp/DM order processing and pricing discrepancies.",
-          "Complex customization options (cap sizes, lace melts, texture lengths) confuse shoppers on standard store templates.",
-          "Mobile drop-off occurs when payment gateways fail or require tedious multi-step verification."
-        ]
-      },
-      usersAndContext: {
-        targetAudience: "Discerning women, stylists, and luxury hair enthusiasts seeking authentic virgin hair with guaranteed swift delivery.",
-        context: "Demands a premium visual aesthetic matching luxury retail, paired with rock-solid mobile performance on Nigerian network bandwidths."
-      },
-      approach: {
-        strategy: "Design an editorial, high-trust storefront with rich product media, interactive style carousels, custom wig builders, and instant verified checkout.",
-        keyPillars: [
-          { title: "Visual-First Showcase", description: "High-resolution video and photo badges highlighting texture density and lace quality." },
-          { title: "Bespoke Customizer", description: "Guided step-by-step custom wig curation and color selection workflows." },
-          { title: "Frictionless Checkout", description: "Seamless Flutterwave integration with 24-hour dispatch guarantee messaging." }
-        ]
-      },
-      productDecisions: [
-        {
-          title: "Editorial Luxury Visual Grid over Dense Commodity Catalog",
-          rationale: "Elevates brand perception and communicates product quality, justifying premium luxury price points.",
-          tradeoff: "Requires disciplined image optimization to prevent layout shifts and heavy load times."
-        },
-        {
-          title: "Direct Quick-Add Drawer with Variant Selectors",
-          rationale: "Enables fast multi-item purchasing without navigating away from style discovery carousels.",
-          tradeoff: "More complex client-side cart state synchronization."
-        }
-      ],
-      design: {
-        description: "Sophisticated editorial layout with warm neutral tones, subtle gold/sand accents, high-contrast typography, and smooth touch-optimized slide interactions.",
-        highlights: [
-          "Curated style carousels with category pill switching",
-          "Prominent trust guarantees and verified client review grid",
-          "Custom wig curation interactive entry cards"
-        ]
-      },
-      build: {
-        architecture: "Next.js App Router with modular CSS and Tailwind styling, performant image preloading, and secure payment webhook processing.",
-        technicalHighlights: [
-          "Preloaded responsive hero banners and instant asset caching",
-          "Accessible cart drawer with local storage persistence",
-          "Mobile-first responsive navigation with drawer state management"
-        ]
-      },
-      outcome: {
-        summary: "Shipped live production e-commerce store handling catalog browsing, custom inquiries, and verified payments.",
-        achievements: [
-          "Live in production at marizhaircastle.vercel.app",
-          "Smooth 60fps style carousel interactions on iOS and Android devices",
-          "High-conversion checkout path with instant order confirmation"
         ]
       }
     }
@@ -407,6 +242,171 @@ export const PROJECTS_DATA: Project[] = [
         ]
       }
     }
+  },
+  {
+    id: "project-4",
+    slug: "marizhaircastle-ecommerce",
+    title: "Marizhaircastle Luxury E-Commerce",
+    tagline: "High-performance luxury hair e-commerce storefront with custom wig curation and 24-hour fulfillment.",
+    summary: "A mobile-first commerce experience designed to make product discovery, customization, and checkout easier for customers.",
+    description: "Designed and built as a full-featured e-commerce product combining bespoke product filtering, interactive style showcases, custom wig builder flows, and Flutterwave payment integration.",
+    role: "Product Engineer & Lead Developer",
+    category: "Web Product",
+    technologies: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "Flutterwave Payments", "Responsive Media"],
+    image: "https://marizhaircastle.vercel.app/images/hero-wavy-hair.jpg",
+    featured: true,
+    liveUrl: "https://marizhaircastle.vercel.app",
+    caseStudy: {
+      overview: {
+        role: "Product Engineer (Design & Full-Stack)",
+        timeline: "5 Weeks",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Flutterwave API", "Vercel"],
+        summary: "Created a bespoke luxury e-commerce experience tailored for Nigerian high-end hair clients with instant stock verification and mobile-optimized checkout."
+      },
+      problem: {
+        statement: "High-end hair shopping in Nigeria often suffers from fragmented Instagram DM sales, lack of transparent stock verification, and friction in selecting custom wig lace types and lengths.",
+        painPoints: [
+          "Customers lose trust with manual WhatsApp/DM order processing and pricing discrepancies.",
+          "Complex customization options (cap sizes, lace melts, texture lengths) confuse shoppers on standard store templates.",
+          "Mobile drop-off occurs when payment gateways fail or require tedious multi-step verification."
+        ]
+      },
+      usersAndContext: {
+        targetAudience: "Discerning women, stylists, and luxury hair enthusiasts seeking authentic virgin hair with guaranteed swift delivery.",
+        context: "Demands a premium visual aesthetic matching luxury retail, paired with rock-solid mobile performance on Nigerian network bandwidths."
+      },
+      approach: {
+        strategy: "Design an editorial, high-trust storefront with rich product media, interactive style carousels, custom wig builders, and instant verified checkout.",
+        keyPillars: [
+          { title: "Visual-First Showcase", description: "High-resolution video and photo badges highlighting texture density and lace quality." },
+          { title: "Bespoke Customizer", description: "Guided step-by-step custom wig curation and color selection workflows." },
+          { title: "Frictionless Checkout", description: "Seamless Flutterwave integration with 24-hour dispatch guarantee messaging." }
+        ]
+      },
+      productDecisions: [
+        {
+          title: "Editorial Luxury Visual Grid over Dense Commodity Catalog",
+          rationale: "Elevates brand perception and communicates product quality, justifying premium luxury price points.",
+          tradeoff: "Requires disciplined image optimization to prevent layout shifts and heavy load times."
+        },
+        {
+          title: "Direct Quick-Add Drawer with Variant Selectors",
+          rationale: "Enables fast multi-item purchasing without navigating away from style discovery carousels.",
+          tradeoff: "More complex client-side cart state synchronization."
+        }
+      ],
+      design: {
+        description: "Sophisticated editorial layout with warm neutral tones, subtle gold/sand accents, high-contrast typography, and smooth touch-optimized slide interactions.",
+        highlights: [
+          "Curated style carousels with category pill switching",
+          "Prominent trust guarantees and verified client review grid",
+          "Custom wig curation interactive entry cards"
+        ]
+      },
+      build: {
+        architecture: "Next.js App Router with modular CSS and Tailwind styling, performant image preloading, and secure payment webhook processing.",
+        technicalHighlights: [
+          "Preloaded responsive hero banners and instant asset caching",
+          "Accessible cart drawer with local storage persistence",
+          "Mobile-first responsive navigation with drawer state management"
+        ]
+      },
+      outcome: {
+        summary: "Shipped live production e-commerce store handling catalog browsing, custom inquiries, and verified payments.",
+        achievements: [
+          "Live in production at marizhaircastle.vercel.app",
+          "Smooth 60fps style carousel interactions on iOS and Android devices",
+          "High-conversion checkout path with instant order confirmation"
+        ]
+      }
+    }
+  },
+  {
+    id: "project-3",
+    slug: "medvive-telehealth-platform",
+    title: "Medvive , Telehealth Web App & Consultation Flow",
+    tagline: "Accessible digital health platform simplifying doctor-patient consultation and clinical booking.",
+    summary: "A telehealth web application case study streamlining appointment booking, real-time consultation handoffs, and patient health record accessibility.",
+    description: "Collaborated on clinical user research, redesigned multi-step consultation scheduling workflows, and developed accessible UI component systems in Figma.",
+    role: "Product & UI/UX Design (Contributor)",
+    category: "Web Product",
+    technologies: ["Figma", "Design Systems", "UI/UX Research", "Interactive Prototyping", "WCAG 2.1 AA"],
+    image: "https://mir-s3-cdn-cf.behance.net/project_modules/hd/ca042b241563965.695b850c47ee4.jpg",
+    featured: false,
+    liveUrl: "https://medvive.ng",
+    behanceUrl: "https://www.behance.net/gallery/241563965/Medvive-Telehealth-Web-App-UIUX-Case-Study",
+    caseStudy: {
+      overview: {
+        role: "UI/UX & Product Design",
+        timeline: "4 Weeks",
+        team: "Collaborated with Senior Product Designer & Clinical Stakeholders",
+        technologies: ["Figma", "Design Systems", "Usability Testing", "Accessibility Auditing"],
+        summary: "Redesigned patient-to-doctor consultation journeys to reduce appointment abandonment and enhance digital health accessibility across diverse user age groups."
+      },
+      problem: {
+        statement: "Patients seeking remote healthcare faced confusing onboarding steps, unclear doctor availability schedules, and overwhelming medical intake forms that led to consultation abandonment.",
+        painPoints: [
+          "Complex clinical questionnaires caused high drop-off before patients could confirm appointments.",
+          "Unclear doctor specialties and response times led to patient anxiety and support ticket overload.",
+          "Low-contrast interface elements failed accessibility benchmarks for elderly and low-vision patients."
+        ]
+      },
+      usersAndContext: {
+        targetAudience: "Patients needing timely general practice and specialist consultations, plus healthcare providers managing busy digital appointment queues.",
+        context: "Healthcare interactions require extreme clarity, reassuring privacy markers, and minimal cognitive strain during stressful moments."
+      },
+      approach: {
+        strategy: "Re-architected the consultation journey into transparent, low-friction stages: Symptom Intake → Specialist Matching → Time Slot Confirmation → Virtual Waiting Room.",
+        keyPillars: [
+          { title: "Progressive Intake", description: "Broke down complex clinical intake into digestible, multi-step micro-forms." },
+          { title: "Specialist Transparency", description: "Created high-trust doctor profile cards with verified credentials, ratings, and immediate slot availability." },
+          { title: "Inclusive Accessibility", description: "Enforced strict WCAG 2.1 AA color contrast, typography hierarchies, and touch-target standards." }
+        ]
+      },
+      researchAndInsights: {
+        summary: "Conducted usability tests and stakeholder interviews to pinpoint the major friction points in virtual consultation workflows.",
+        findings: [
+          "65% of drop-offs occurred on the medical history form due to excessive single-page scroll length.",
+          "Clear real-time consultation price breakdowns improved booking completion rates by over 40%."
+        ]
+      },
+      productDecisions: [
+        {
+          title: "Step-by-Step Accordion Booking over Single-Page Form",
+          rationale: "Reduces visual cognitive load and guides anxious patients methodically toward booking completion.",
+          tradeoff: "Required careful state preservation so patients can modify previous answers easily."
+        },
+        {
+          title: "Clear Appointment Status Badges and Direct Reminders",
+          rationale: "Provides reassurance and reduces missed virtual appointments.",
+          tradeoff: "Requires clear visual hierarchy to avoid crowding the patient home dashboard."
+        }
+      ],
+      design: {
+        description: "Calm, trust-inducing healthcare interface utilizing serene medical blues and soft neutrals, paired with clear typography and readable data cards.",
+        highlights: [
+          "Clear calendar time-slot selector with instant zone synchronization",
+          "Visual doctor badge profiles with specialty tags",
+          "Responsive consultation management dashboard for patients"
+        ]
+      },
+      build: {
+        architecture: "Comprehensive Figma design system with auto-layout variants, spacing tokens, and detailed developer handoff specifications.",
+        technicalHighlights: [
+          "Complete design tokens for spacing, elevation, colors, and typography",
+          "Interactive prototype with full micro-interactions for doctor booking states",
+          "High-contrast focus rings and accessible touch targets verified against WCAG AA standards"
+        ]
+      },
+      outcome: {
+        summary: "Published full case study on Behance documenting the end-to-end design research, design decisions, and prototype solutions.",
+        achievements: [
+          "Published and featured on Behance (Medvive Telehealth Case Study)",
+          "Streamlined patient consultation booking journey from 7 steps to 3 intuitive milestones",
+          "100% WCAG 2.1 AA accessible UI color contrast rating across all states"
+        ]
+      }
+    }
   }
 ];
 
@@ -449,6 +449,7 @@ export const SITE_CONFIG = {
   name: "Mariam Abdul-Rasheed",
   role: "Product Engineer",
   location: "Nigeria",
+  avatar: "/images/mariam-profile.jpg",
   tagline: "Think → Design → Build → Integrate AI → Ship",
   bio: "Product Engineer combining product thinking, design craft, modern frontend engineering, and AI integration to build real, production-ready digital products that solve genuine user problems.",
   email: "Marizmimi111@gmail.com",

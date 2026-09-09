@@ -21,8 +21,16 @@ export default function ResumePage() {
           <h1 className="text-3xl font-serif text-zinc-950 font-normal">
             {RESUME_DATA.name}
           </h1>
-          <p className="text-sm text-zinc-600 font-sans">
-            {RESUME_DATA.title} &bull; {RESUME_DATA.location}
+          <p className="text-base font-medium text-zinc-900 mt-1">
+            {RESUME_DATA.title}
+          </p>
+          {RESUME_DATA.pillars && (
+            <p className="text-xs font-mono text-orange-600 mt-0.5">
+              {RESUME_DATA.pillars}
+            </p>
+          )}
+          <p className="text-xs text-zinc-500 font-sans mt-0.5">
+            {RESUME_DATA.location}
           </p>
         </div>
 
@@ -41,61 +49,84 @@ export default function ResumePage() {
       {/* Structured Resume Canvas */}
       <div className="p-8 sm:p-12 rounded-3xl bg-white border border-zinc-200 shadow-sm space-y-10 font-sans">
         {/* Header / Contact summary inside sheet */}
-        <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-zinc-100 text-xs text-zinc-600">
-          <div className="flex items-center gap-1.5 font-mono">
-            <MapPin className="h-3.5 w-3.5 text-zinc-400" />
-            <span>{RESUME_DATA.location}</span>
+        <div className="space-y-4 pb-6 border-b border-zinc-100">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-serif text-zinc-950 font-normal">
+              {RESUME_DATA.name}
+            </h2>
+            <div className="flex flex-wrap items-center gap-2 mt-1">
+              <span className="text-base font-medium text-zinc-900">
+                {RESUME_DATA.title}
+              </span>
+              {RESUME_DATA.pillars && (
+                <>
+                  <span className="text-xs text-zinc-300">&bull;</span>
+                  <span className="text-xs font-mono text-orange-600 font-medium">
+                    {RESUME_DATA.pillars}
+                  </span>
+                </>
+              )}
+            </div>
           </div>
-          <div className="flex flex-wrap items-center gap-4">
-            <a
-              href={`mailto:${RESUME_DATA.contact.email}`}
-              className="hover:text-orange-600 transition-colors font-mono"
-            >
-              {RESUME_DATA.contact.email}
-            </a>
-            {RESUME_DATA.contact.phone && (
+
+          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-zinc-600">
+            <div className="flex items-center gap-1.5 font-mono">
+              <MapPin className="h-3.5 w-3.5 text-zinc-400" />
+              <span>{RESUME_DATA.location}</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-4">
               <a
-                href={`tel:${RESUME_DATA.contact.phone}`}
-                className="hover:text-orange-600 transition-colors font-mono text-zinc-500"
+                href={`mailto:${RESUME_DATA.contact.email}`}
+                className="hover:text-orange-600 transition-colors font-mono"
               >
-                {RESUME_DATA.contact.phone}
+                {RESUME_DATA.contact.email}
               </a>
-            )}
-            <a
-              href={RESUME_DATA.contact.behance}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-orange-600 transition-colors"
-            >
-              Behance
-            </a>
-            <a
-              href={RESUME_DATA.contact.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-orange-600 transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a
-              href={RESUME_DATA.contact.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-orange-600 transition-colors"
-            >
-              GitHub
-            </a>
+              {RESUME_DATA.contact.phone && (
+                <a
+                  href={`tel:${RESUME_DATA.contact.phone}`}
+                  className="hover:text-orange-600 transition-colors font-mono text-zinc-500"
+                >
+                  {RESUME_DATA.contact.phone}
+                </a>
+              )}
+              <a
+                href={RESUME_DATA.contact.behance}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-orange-600 transition-colors"
+              >
+                Behance
+              </a>
+              <a
+                href={RESUME_DATA.contact.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-orange-600 transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
+                href={RESUME_DATA.contact.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-orange-600 transition-colors"
+              >
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* Executive Summary */}
+        {/* Professional Summary */}
         <section className="space-y-3">
-          <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400">
+          <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400">
             Professional Summary
-          </h2>
-          <p className="text-sm text-zinc-700 leading-relaxed">
-            {RESUME_DATA.summary}
-          </p>
+          </h3>
+          <div className="space-y-3 text-sm text-zinc-700 leading-relaxed">
+            {RESUME_DATA.summary.split("\n\n").map((para, idx) => (
+              <p key={idx}>{para}</p>
+            ))}
+          </div>
         </section>
 
         {/* Skills Matrix */}
