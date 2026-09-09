@@ -111,7 +111,7 @@ export default function HomePage() {
           <SectionHeader
             eyebrow="Capabilities"
             title="How I Bring Products to Life"
-            description="A multidisciplinary approach that combines user empathy with technical rigor across the full product development lifecycle."
+            description="I combine product thinking, design, engineering, and AI to turn ideas into working digital products."
           />
           <CapabilityGrid />
         </section>

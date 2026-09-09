@@ -10,10 +10,25 @@ import { GithubIcon, LinkedinIcon, BehanceIcon } from "@/components/ui/SocialIco
 export default function ContactPage() {
   const [copied, setCopied] = useState(false);
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(SITE_CONFIG.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const handleCopyEmail = async () => {
+    try {
+      if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(SITE_CONFIG.email);
+      } else {
+        const textArea = document.createElement("textarea");
+        textArea.value = SITE_CONFIG.email;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+      }
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
   };
 
   return (

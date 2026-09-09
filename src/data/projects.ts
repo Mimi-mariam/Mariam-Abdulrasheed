@@ -165,7 +165,7 @@ export const PROJECTS_DATA: Project[] = [
     category: "Full Stack & AI",
     technologies: ["Figma", "Mobile App UI/UX", "AI Automation", "Computer Vision UX", "Design Systems"],
     image: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/3ad94a251684655.6a3c681b02a49.png",
-    featured: false,
+    featured: true,
     behanceUrl: "https://www.behance.net/gallery/251684655/SellSnap",
     caseStudy: {
       overview: {
@@ -412,36 +412,26 @@ export const PROJECTS_DATA: Project[] = [
 
 export const CAPABILITIES_DATA = {
   product: [
-    "Product Thinking & Scoping",
-    "User Journey Mapping",
-    "Requirements & PRD Definition",
-    "MVP Strategy & Fast Validation",
-    "Feature Prioritization",
-    "Data-Driven Iteration"
+    "Product strategy",
+    "MVP scoping",
+    "Requirements",
+    "User flows"
   ],
   design: [
-    "Product UI & UX Design",
-    "Interactive Prototyping",
-    "Design Systems & Token Architecture",
-    "Accessibility (WCAG 2.1 AA)",
-    "Micro-Interactions & Animation",
-    "Information Architecture"
+    "UX/UI",
+    "Prototyping",
+    "Design systems"
   ],
   engineering: [
-    "Next.js (App Router) & React",
-    "TypeScript & Type Safety",
-    "Tailwind CSS & Responsive Layouts",
-    "REST & Server Actions",
-    "PostgreSQL & Database Modeling",
-    "Vercel Deployment & Git Workflows"
+    "React",
+    "Next.js",
+    "TypeScript",
+    "PostgreSQL"
   ],
   aiAndAutomation: [
-    "AI Product Feature Integration",
-    "Prompt Engineering & Structured Outputs",
-    "LLM Tool-Calling & Context Orchestration",
-    "Design-to-Code Workflow Automation",
-    "AI-Assisted Rapid Development",
-    "Practical Workflow Automation"
+    "AI product features",
+    "LLM workflows",
+    "Automation"
   ]
 };
 
